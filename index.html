@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="RoboBrain">
+  <meta name="keywords" content="RoboBrain">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RoboBrain</title>
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <img 
+            src="images/RoboBrain-logo.png"
+            class="center"
+            width="180"
+          />
+          <h1 class="title is-1 publication-title">
+            RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract to Concrete
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              RoboBrain Team&nbsp; &nbsp; &nbsp; 
+              <!-- RoboBrain Team<sup>1</sup>&nbsp; &nbsp; &nbsp;  -->
+            </span>
+            <!-- <span class="author-block">
+              Guanqun Liu<sup>2</sup>&nbsp; &nbsp; &nbsp; 
+            </span>
+            <span class="author-block">
+              Yuting Zhao<sup>3</sup>&nbsp; &nbsp; &nbsp; 
+            </span>
+            <span class="author-block">
+              Yuheng Ji<sup>3</sup>
+            </span> -->
+          </div>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Mengchuan Wei<sup>4</sup>&nbsp; &nbsp; &nbsp; 
+            </span>
+            <span class="author-block">
+              Haimei Zhao<sup>5</sup>&nbsp; &nbsp; &nbsp; 
+            </span>
+            <span class="author-block">
+              Lingdong Kong<sup>6</sup>&nbsp; &nbsp; &nbsp; 
+            </span>
+            <span class="author-block">
+              Rong Yin<sup>7</sup>&nbsp; &nbsp; &nbsp; 
+            </span>
+            <span class="author-block">
+              Yu Liu<sup>8</sup>
+            </span>
+          </div> -->
+
+
+          </br>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <sup>1</sup>Beijing Academy of Artificial Intelligence&nbsp;&nbsp;&nbsp; 
+              <sup>2</sup>IQIYI&nbsp;&nbsp;&nbsp; 
+              <sup>3</sup>Institute of Automation, CAS&nbsp;&nbsp;&nbsp; 
+              <sup>4</sup>Beijing Samsung Telecom R&D Center&nbsp;&nbsp;&nbsp; 
+              <sup>5</sup>The University of Sydney&nbsp;&nbsp;&nbsp; 
+              <sup>6</sup>National University of Singapore&nbsp;&nbsp;&nbsp; 
+              <sup>7</sup>Institute of Information Engineering, CAS&nbsp;&nbsp;&nbsp; 
+              <sup>8</sup>Hefei University of Technology
+            </span>
+          </div> -->
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://RoboBrain.github.io/RoboBrain.pdf"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>PDF</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://RoboBrain.github.io/"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://RoboBrain.github.io/"
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+          <img 
+              src="images/Radar_Chart_page-0001.jpg"
+              class="pipeline image"
+              alt="pipeline image"
+              style="margin-bottom: 20px;"
+          />
+      <h2 class="subtitle has-text-centered">
+        We propose <strong>RoboBrain</strong>, a unified multimodal large language model designed for robotic manipulation, 
+        which facilitates more efficient task execution by transforming abstract concepts into concrete actions.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Multi-sensor fusion models play a crucial role in autonomous driving perception, particularly in tasks like 3D
+            object detection and HD map construction. These models provide essential and comprehensive static environmental information
+            for autonomous driving systems. While camera-LiDAR fusion methods have shown promising results by integrating data from both modalities, 
+            they often depend on complete sensor inputs. This reliance can lead to low robustness and potential failures when sensors are corrupted or missing, raising significant safety concerns.
+            To tackle this challenge, we introduce the Multi-Sensor Corruption Benchmark (<b>RoboBrain</b>), the first comprehensive benchmark 
+              aimed at evaluating the robustness of multi-sensor autonomous driving perception models against various sensor corruptions. 
+              Our benchmark includes <b>16</b> combinations of corruption types that disrupt both camera and LiDAR inputs, either individually 
+                or concurrently. Extensive evaluations of six 3D object detection models and four HD map construction models reveal substantial 
+                performance degradation under adverse weather conditions and sensor failures, underscoring critical safety issues. The benchmark 
+                toolkit and affiliated code and model checkpoints have been made publicly accessible.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Benchmark Definition</h2>
+        <div class="pipeline">
+          <img 
+              src="images/new_16_benchmark_page-0001.jpg"
+              class="pipeline image"
+              alt="pipeline image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            Overview of the RoboBrain. 
+            Definitions of the multi-sensor corruptions in RoboBrain. 
+            Our benchmark encompasses a total of <b>16</b> corruption types for multi-modal perception models, 
+            which can be categorized into weather, interior, and sensor failure scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Benchmark Study</h2>
+        <div class="pipeline">
+        <img 
+            src="images/tab2.png"
+            class="pipeline image"
+            alt="pipeline image"
+        />
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+        <p>
+          Benchmarking 3D object detection models. 
+          We report detailed information on the methods grouped by input modality, backbone, and input image size. 
+          “L” and “C” represent Lidar and Camera, respectively. 
+          ‘Swin-T”, “R50”, “VOV-99”, and “SEC” are short for Swin-Transformer, ResNet50, VovNet, and Second. 
+          We report NuScenes detection score (NDS) and mean average precision (MAP) on the official NuScenes validation set.
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="pipeline">
+        <img 
+            src="images/tab3.png"
+            class="pipeline image"
+            alt="pipeline image"
+        />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+        <p>
+          Benchmarking HD map constructors. 
+          We report detailed information on the methods grouped by input modality, BEV encoder, backbone, and training epochs. 
+          “L” and “C” represent Lidar and Camera, respectively. 
+          “Effi-B0,” “R50,” “PP,” and “SEC” refer to EfficientNet-B0, ResNet50, PointPillars, and Second. 
+          AP denotes performance on the clean NuScenes val set. 
+          The subscripts b., p., and d. denote boundary, pedestrian crossing, and divider, respectively.
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+</div>
+</div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Sensor Corruptions</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <h3 class="title is-3">&nbsp; &nbsp; &nbsp; &nbsp;  </h3>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</br>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <h3 class="title is-3">&nbsp; &nbsp; &nbsp; &nbsp; Fog</h3>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="GIFs/fog_1_multi_view_camera_scene-0035_scene_animation.gif"/>
+        </div>
+        <div class="item">
+          <img src="GIFs/fog_2_multi_view_camera_scene-0035_scene_animation.gif"/>
+        </div>
+        <div class="item">
+          <img src="GIFs/fog_3_multi_view_camera_scene-0035_scene_animation.gif"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.results-carousel {
+    display: flex; /* 创建 Flexbox 容器 */
+    justify-content: center; /* 水平居中 */
+}
+
+.item {
+    flex: 1; /* 使每个 item 平均分配空间 */
+    margin: 0 5px; /* 图片之间的间距 */
+}
+
+.item img {
+    width: 100%; /* 图片宽度为其父元素（item）的100% */
+    height: auto; /* 保持比例 */
+}
+</style>
+
+</br>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Robustness Evaluation</h2>
+        <div class="pipeline">
+        <img 
+            src="images/robustness_eval.png"
+            class="pipeline image"
+            alt="pipeline image"
+        />
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+        <p>
+          Robustness benchmark of state-of-the-art multi-modal methods under multi-sensor corruptions. 
+          For the 3D object detection task, we use NDS as the metric.
+          Additionally, we use MAP as the metric for the HD map construction task.
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="pipeline">
+        <img 
+            src="images/3d_level_benchmark_page-0001.jpg"
+            class="pipeline image"
+            alt="pipeline image"
+        />
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+        <p>
+          Robustness against all corruption types and severity levels in 3D object detection tasks is 
+          evaluated through the Resilience Score (RS), calculated using the NDS score for varying severity levels.
+        </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+   <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="pipeline">
+        <img 
+            src="images/hd_level_benchmark_page-0001.jpg"
+            class="pipeline image"
+            alt="pipeline image"
+        />
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+        <p>
+          Robustness against all corruption types and severity levels in 3D object detection tasks is 
+          evaluated through the Resilience Score (RS), calculated using the NDS score for varying severity levels.
+        </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="pipeline">
+        <img 
+            src="images/RRS_3D_benchmark_page-0001.jpg"
+            class="pipeline image"
+            alt="pipeline image"
+        />
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+        <p>
+           Relative robustness visualization. Relative Resilience Score (RRS) computed with NDS using BEVFusion as baseline.
+        </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="pipeline">
+        <img 
+            src="images/RRS_HD_benchmark_page-0001.jpg"
+            class="pipeline image"
+            alt="pipeline image"
+        />
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+        <p>
+           Relative robustness visualization. Relative Resilience Score (RRS) computed with mAP using MapTR as the baseline.
+        </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+</div>
+</div>
+
+</section>
+
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">License</h2>
+    <p>The datasets and benchmarks are under the Creative Commons Attribution-NonCommercial-ShareAlike
+      4.0 International License</p>
+  </div>
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{hao2024mapbench,
+      title   ={},
+      author  ={},
+      journal ={arXiv preprint arXiv:},
+      year    ={2024}
+}
+</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The source code of this website is borrowed from 
+            <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+          <!-- <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/limacv/deblurnerf">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -189,68 +189,162 @@
         </div>
     </section>
 
-    <section class="section">
-        <div class="container is-max-widescreen">
-            <div class="rows">
-                <div class="rows is-centered ">
-                    <h2 class="title is-3 has-text-centered">RoboBrain Overview</h2>
 
-                    <figure>
-                        <img src="images/RoboBrain_teaser.jpg" alt="teaser">
-                        <figcaption>RoboBrain consists of three key robotic capabilities: planning capability, affordance perception, and trajectory prediction.
-                            RoboBrain outperforms previous MLLMs in both robotics and general-purpose tasks.
-                            The bottom part shows the data composition of our ShareRobot dataset and provides a specific example of visual question answering.
-                            Best viewed on screen.</figcaption>
-                    </figure>
-                </div>
+
+
+    <div class="columns is-centered">
+        <div class="container">
+          <div class="content has-text-centered">
+            <h2 class="title is-3">RoboBrain Overview</h2>
+  
+            <div class="box m-5" >
+              <div class="content has-text-centered">
+                <figure>
+                    <img src="images/RoboBrain_teaser.jpg" alt="teaser">
+                    <figcaption>RoboBrain consists of three key robotic capabilities: planning capability, affordance perception, and trajectory prediction.
+                        RoboBrain outperforms previous MLLMs in both robotics and general-purpose tasks.
+                        The bottom part shows the data composition of our ShareRobot dataset and provides a specific example of visual question answering.
+                        Best viewed on screen.</figcaption>
+                </figure>
+              </div>
             </div>
+  
+          </div>
         </div>
-    </section>
+      </div>
+
 
     <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows is-centered">
+
+
             <h2 class="title is-3 has-text-centered">RoboBrain Model</h2>
 
-            <figure class="has-text-centered">
-                <img src="images/pipeline.jpg" alt="pipeline">
-                <figcaption><strong>The pipeline of our RoboBrain.</strong>
-                    The images, multiple images, and videos are sent into our model to pre-train a foundation robotic brain. 
-                    Besides, we fine-tune the RoboBrain via A-LoRA and T-LoRA to develop Affordance and Trajectory skills. 
-                    In practical applications, the model first generates detailed plans, and then splits it into sub-task descriptions to execute specific robotic tasks. </figcaption>
-            </figure>
-            <figure class="has-text-centered">
-                <img src="images/train.jpg" alt="train">
-                <figcaption>Detailed configuration for each training stage of the RoboBrain.</figcaption>
-            </figure>
-            <figure class="has-text-centered">
-                <img src="images/training_data.jpg" alt="train_data" width="500">
-                <figcaption>The distribution of the entire training dataset.</figcaption>
-            </figure>
+            <div class="box m-5" >
+                <div class="content has-text-centered">
+                    <figure class="has-text-centered">
+                        <img src="images/pipeline.jpg" alt="pipeline">
+                        <figcaption><strong>The pipeline of our RoboBrain.</strong>
+                            The images, multiple images, and videos are sent into our model to pre-train a foundation robotic brain. 
+                            Besides, we fine-tune the RoboBrain via A-LoRA and T-LoRA to develop Affordance and Trajectory skills. 
+                            In practical applications, the model first generates detailed plans, and then splits it into sub-task descriptions to execute specific robotic tasks. </figcaption>
+                    </figure>
+                </div>
+              </div>
+
+
+  
+
+
+
+              <div class="box m-5" >
+                <div class="content has-text-centered">
+
+                    <figure class="has-text-centered">
+                        <img src="images/train.jpg" alt="train">
+                        <figcaption>Detailed configuration for each training stage of the RoboBrain.</figcaption>
+                    </figure>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+              <section class="section" style="margin-top: -50px;"></section>
+              <div class="container is-max-desktop">
+                <div class="columns is-centered" style="display: flex; align-items: center;">
+                  <!-- Left Column for the Image -->
+                  <div class="column is-half" style="text-align: center;">
+                    <img src="images/training_data.jpg" style="max-width: 100%; height: auto;" />
+                  </div>
+                  <!-- Right Column for the Text -->
+                  <div class="column is-half">
+                    <div class="content has-text-justified" style="padding-left: 15px;">
+                      <h2 class="title is-3">
+                        Data Distribution
+                      </h2>
+                      <p>
+                        In the main body of the paper, we emphasize the impor-
+                        tance of the training data and the proportion of robotic data.
+                        In this section, we will provide a detailed overview of the
+                        training data and its sources. The distribution of the entire
+                        training dataset is illustrated 
+                      </p>
+                    </div>
+                  </div>
+                </div><hr>
+              </div>
+            </section>
+          
+          
+            <br/>
 
         </div>
     </div>
+
+
+
+
+
 
 <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows is-centered">
             <h2 class="title is-3 has-text-centered">Evaluation Results</h2>
 
-            <figure class="has-text-centered">
-                <img src="images/eval.jpg" alt="eval_planning">
-                <figcaption>The performance of our model RoboBrain on the OpenEQA, ShareRobot, and RoboVQA benchmarks. RoboBrain surpassed all
-                    baseline models, achieving state-of-the-art results.</figcaption>
-            </figure>
 
-            <figure class="has-text-centered">
-                <img src="images/eval_traj.jpg" alt="eval_traj" width="500">
-                <figcaption><strong>Trajectory Prediction Results Comparison. </strong>Discrete Frechet Distance (DFD), Hausdorff Distance (HD), and Root Mean Square Error (RMSE).</figcaption>
-            </figure>
+              <div class="box m-5">
+            
+                <div id="results-carousel" class="carousel results-carousel">  
+                
+                  <div class="content has-text-centered">
+                    <img src="images/openeqa.png" alt="" width="70%"/>
+                    <p style="margin-bottom: 30px;">Experimental results on the openeqa tasks. </p>
+                  </div>
+                
+                  <div class="content has-text-centered">
+                    <img src="images/sharedrobot.png" alt="" width="70%"/>
+                    <p style="margin-bottom: 30px;">Experimental results on the sharedrobot reasoning tasks.</p>
+                  </div>
+      
+                  <div class="content has-text-centered">
+                    <img src="images/robovqabenchmark.png" alt="" width="70%"/>
+                    <p style="margin-bottom: 30px;">Experimental results on the robovqabenchmark tasks.</p>
+                  </div>
+      
+                </div>
+      
+              </div>
 
-            <figure class="has-text-centered">
-                <img src="images/eval_afford.jpg" alt="eval_afford" width="500">
-                <figcaption><strong>The comparison of affordance prediction. </strong>We utilize AP as the metric, and test them on affordance test set.</figcaption>
-            </figure>
+              <div class="box m-5">
+            
+                <div id="results-carousel" class="carousel results-carousel">  
+                
+                  <div class="content has-text-centered">
+                    <img src="images/eval_traj.jpg" alt="" width="70%"/>
+                    <p style="margin-bottom: 30px;">Trajectory Prediction Results Comparison. </strong>Discrete Frechet Distance (DFD), Hausdorff Distance (HD), and Root Mean Square Error (RMSE). </p>
+                  </div>
+                
+
+                  <div class="content has-text-centered">
+                    <img src="images/eval_afford.jpg" alt="" width="70%"/>
+                    <p style="margin-bottom: 30px;">The comparison of affordance prediction. </strong>We utilize AP as the metric, and test them on affordance test set.. </p>
+                  </div>
+                </div>
+      
+              </div>
+
+
+
+
+
+
+
         </div>
     </div>
 </section>
@@ -262,43 +356,68 @@
             <div class="rows is-centered ">
                 <h2 class="title is-3 has-text-centered">Visualization</h2>
 
-                <figure>
-                    <img src="images/visualization.jpg" alt="visualization">
-                    <figcaption>This visualization illustrates that RoboBrain can interpret human instructions and visual images to generate action plans and
-                        assessments based on real-time image feedback. Furthermore, it predicts trajectories for each step and identifies corresponding affordances.</figcaption>
-                </figure>
 
-                <figure>
-                    <img src="images/suppl_planning_demo_with_bad_case.png" alt="visualization">
-                    <figcaption>
-                        Additional embodied planning of RoboBrain. Here, we present additional embodied planning for robotic tasks generated by RoboBrain. 
-                        In this figure, we demonstrate the planning results of RoboBrain for four distinct robotic manipulation tasks: "Water plants", 
-                        "Put the pot in the drawer", "Cluster blocks of the same color into different corners", and "Clean the desk", 
-                        where the first three are categorized as good cases, and the last one as a bad case. 
-                    </figcaption>
-                </figure>
 
-                <figure>
-                    <img src="images/visual_afford.jpg" alt="visualization">
-                    <figcaption><strong>Additional visualizations of diverse affordance areas.</strong> 
-                        The text below each subfigure indicates the task instructions, 
-                        while the red bounding boxes represent the affordance areas predicted by the RoboBrain model. 
-                        The visualizations in the first three rows demonstrate that our RoboBrain model effectively identifies reasonable affordance areas based on human instructions and visual information. 
-                        The fourth row presents several failure cases, which may stem from the model's lack of ability to perceive and localize in noisy environments. 
-                        This limitation could be attributed to the absence of such scenarios in the training data used during Stage 4. 
-                        The complete prompt provided to RoboBrain is: "You are a Franka robot using joint control. The task is \$TASK. 
-                        Please predict all possible affordance areas of the end effector." Here, \$TASK represents specific task instructions, such as "drink with the cup."</figcaption>
-                </figure>
+                <div class="box m-5" >
+                    <div class="content has-text-centered">
+                        <figure>
+                            <img src="images/visualization.jpg" alt="visualization">
+                            <figcaption>This visualization illustrates that RoboBrain can interpret human instructions and visual images to generate action plans and
+                                assessments based on real-time image feedback. Furthermore, it predicts trajectories for each step and identifies corresponding affordances.</figcaption>
+                        </figure>
+                    </div>
+                  </div>
+    
 
-                <figure>
-                    <img src="images/visual_traj.jpg" alt="visualization">
-                    <figcaption><strong>Additional visualizations of diverse 2D trajectories.</strong> 
-                         The red-to-purple gradient curves represent the ground truth, while the green-to-blue gradient curves indicate the predicted trajectories. 
-                         The visualizations in the first two rows demonstrate that our RoboBrain model effectively generates end-effector manipulation curves based on the robot's observations and task instructions. 
-                         The third row shows that RoboBrain is not merely fitting trajectories but also exhibits the ability to generate more reasonable and feasible curves. 
-                         The fourth row presents some failure cases, which stem from a lack of spatial awareness and world knowledge. 
-                         These limitations result in an inability to accurately localize the objects involved in interactions, account for physical constraints, and adapt to the variability of deformable objects.</figcaption>
-                </figure>
+                  <div class="box m-5" >
+                    <div class="content has-text-centered">
+                        <figure>
+                            <img src="images/suppl_planning_demo_with_bad_case.png" alt="visualization">
+                            <figcaption>
+                                Additional embodied planning of RoboBrain. Here, we present additional embodied planning for robotic tasks generated by RoboBrain. 
+                                In this figure, we demonstrate the planning results of RoboBrain for four distinct robotic manipulation tasks: "Water plants", 
+                                "Put the pot in the drawer", "Cluster blocks of the same color into different corners", and "Clean the desk", 
+                                where the first three are categorized as good cases, and the last one as a bad case. 
+                            </figcaption>
+                        </figure>
+                    </div>
+                  </div>
+
+
+                  <div class="box m-5" >
+                    <div class="content has-text-centered">
+                        <figure>
+                            <img src="images/visual_afford.jpg" alt="visualization">
+                            <figcaption><strong>Additional visualizations of diverse affordance areas.</strong> 
+                                The text below each subfigure indicates the task instructions, 
+                                while the red bounding boxes represent the affordance areas predicted by the RoboBrain model. 
+                                The visualizations in the first three rows demonstrate that our RoboBrain model effectively identifies reasonable affordance areas based on human instructions and visual information. 
+                                The fourth row presents several failure cases, which may stem from the model's lack of ability to perceive and localize in noisy environments. 
+                                This limitation could be attributed to the absence of such scenarios in the training data used during Stage 4. 
+                                The complete prompt provided to RoboBrain is: "You are a Franka robot using joint control. The task is \$TASK. 
+                                Please predict all possible affordance areas of the end effector." Here, \$TASK represents specific task instructions, such as "drink with the cup."</figcaption>
+                        </figure>
+        
+                    </div>
+                  </div>
+
+
+                  <div class="box m-5" >
+                    <div class="content has-text-centered">
+
+                        <figure>
+                            <img src="images/visual_traj.jpg" alt="visualization">
+                            <figcaption><strong>Additional visualizations of diverse 2D trajectories.</strong> 
+                                 The red-to-purple gradient curves represent the ground truth, while the green-to-blue gradient curves indicate the predicted trajectories. 
+                                 The visualizations in the first two rows demonstrate that our RoboBrain model effectively generates end-effector manipulation curves based on the robot's observations and task instructions. 
+                                 The third row shows that RoboBrain is not merely fitting trajectories but also exhibits the ability to generate more reasonable and feasible curves. 
+                                 The fourth row presents some failure cases, which stem from a lack of spatial awareness and world knowledge. 
+                                 These limitations result in an inability to accurately localize the objects involved in interactions, account for physical constraints, and adapt to the variability of deformable objects.</figcaption>
+                        </figure>
+        
+        
+                    </div>
+                  </div>
 
 
             </div>
@@ -311,25 +430,46 @@
         <div class="rows is-centered">
             <h2 class="title is-3 has-text-centered">ShareRobot</h2>
 
-            <figure class="has-text-centered">
-                <img src="images/sharerobot.jpg" alt="dataset">
-                <figcaption><strong>The diversity of our ShareRobot dataset. </strong>Our dataset involves (a) 23 original datasets, (b) 12 embodiments and (c) 107 types 
-                    of atomic tasks. The distribution of the top 20 most frequent atomic actions within our ShareRobot dataset is presented in (c)</figcaption>
-            </figure>
 
-            <figure class="has-text-centered">
-                <img src="images/dataset_pipeline.jpg" alt="dataset_pipeline">
-                <figcaption><strong>The generation procession of our ShareRobot dataset. </strong>Our dataset labels multi-dimensional information, including task 
-                    planning, object affordance, and end-effector trajectories. The task planning is first annotated by atomic tasks and then augmented by 
-                    constructing question-answer pairs. The affordance and trajectory are labeled on the images according to the specific instructions.</figcaption>
-            </figure>
+            <div class="box m-5" >
+                <div class="content has-text-centered">
+                    <figure class="has-text-centered">
+                        <img src="images/sharerobot.jpg" alt="dataset">
+                        <figcaption><strong>The diversity of our ShareRobot dataset. </strong>Our dataset involves (a) 23 original datasets, (b) 12 embodiments and (c) 107 types 
+                            of atomic tasks. The distribution of the top 20 most frequent atomic actions within our ShareRobot dataset is presented in (c)</figcaption>
+                    </figure>
+    
+                </div>
+              </div>
 
-            <figure class="has-text-centered">
-                <img src="images/prompts.jpg" alt="dataset_prompts">
-                <figcaption><strong>Additonal visualizations of prompts for Gemini. </strong>The prompts encapsulate the task description for robotic arm action 
-                    recognition, the components of the target, and the desired response format. Additionally, an example is included to assist Gemini in 
-                    understanding the specific task.</figcaption>
-            </figure>
+
+
+              <div class="box m-5" >
+                <div class="content has-text-centered">
+                    <figure class="has-text-centered">
+                        <img src="images/dataset_pipeline.jpg" alt="dataset_pipeline">
+                        <figcaption><strong>The generation procession of our ShareRobot dataset. </strong>Our dataset labels multi-dimensional information, including task 
+                            planning, object affordance, and end-effector trajectories. The task planning is first annotated by atomic tasks and then augmented by 
+                            constructing question-answer pairs. The affordance and trajectory are labeled on the images according to the specific instructions.</figcaption>
+                    </figure>
+                </div>
+              </div>
+
+
+
+              <div class="box m-5" >
+                <div class="content has-text-centered">
+                    <figure class="has-text-centered">
+                        <img src="images/prompts.jpg" alt="dataset_prompts">
+                        <figcaption><strong>Additonal visualizations of prompts for Gemini. </strong>The prompts encapsulate the task description for robotic arm action 
+                            recognition, the components of the target, and the desired response format. Additionally, an example is included to assist Gemini in 
+                            understanding the specific task.</figcaption>
+                    </figure>
+                </div>
+              </div>
+
+
+
         </div>
     </div>
 </section>

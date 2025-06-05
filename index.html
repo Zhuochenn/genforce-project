@@ -183,35 +183,166 @@
           </div>
         </div>
       </div>
-    <!-- YouTube Video -->
-    <section class="hero is-small">
-        <div class="hero-body">
-            <div class="container is-max-desktop">
-                <div class="columns is-centered has-text-centered">
-                    <div class="column is-four-fifths">
-                        <div class="content">
-                            <h2>
-                                <!-- <h2 class=""> <img src="static/images/highlight_logo.png" width="50"> Highlights</h2> -->
-                                <div class="text-image-container title is-3">
-                                    <div>
-                                        <img src="assets/images/video_logo.png" alt="highlight" width="40">
-                                    </div>
-                                    <div class="text">
-                                        <p>Summary Video</p>
-                                    </div>
+<!-- YouTube Video Grid -->
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full">
+                    <div class="content">
+                        <h2>
+                            <div class="text-image-container title is-3">
+                                <div>
+                                    <img src="assets/images/video_logo.png" alt="highlight" width="40">
                                 </div>
-                            </h2>
-                            <div class="publication-video">
-                                <!---TODO Dhruv: put video link here-->
-                                <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
-                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <div class="text">
+                                    <p>Demo Videos</p>
+                                </div>
                             </div>
+                        </h2>
+
+                        <!-- Video Grid Container -->
+                        <div class="video-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 30px;">
+
+                            <!-- Video 1 -->
+                            <div class="video-item">
+                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                    <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-description" style="margin-top: 15px; text-align: left;">
+                                    <p style="font-weight: bold; margin-bottom: 5px;">系统稳定性</p>
+                                    <p style="font-size: 0.85em; color: #888; font-style: italic;">The robotic arm's grasping and placing of objects demonstrates the model's referential ability in color recognition and its stability in continuous operation.</p>
+                                </div>
+                            </div>
+
+                            <!-- Video 2 -->
+                            <div class="video-item">
+                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                    <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-description" style="margin-top: 15px; text-align: left;">
+                                    <p style="font-weight: bold; margin-bottom: 5px;">行为打断</p>
+                                    <p style="font-size: 0.85em; color: #888; font-style: italic;">The robotic arm grasps and places objects under changing key scene elements, demonstrating the model's rapid scene adaptation ability and its capability to judge object proximity, recognize orientation, and determine distance.</p>
+                                </div>
+                            </div>
+
+                            <!-- Video 3 -->
+                            <div class="video-item">
+                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                    <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-description" style="margin-top: 15px; text-align: left;">
+                                    <p style="font-weight: bold; margin-bottom: 5px;">语音打断</p>
+                                    <p style="font-size: 0.85em; color: #888; font-style: italic;">The robotic arm dynamically adjusts its grasp path and placement in real time via voice command interruption, demonstrating the model's capabilities in object spatial relationship recognition, multi-step reasoning, rapid interactive reasoning, and real-time interruption adjustment.</p>
+                                </div>
+                            </div>
+
+                            <!-- Video 4 -->
+                            <div class="video-item">
+                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                    <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-description" style="margin-top: 15px; text-align: left;">
+                                    <p style="font-weight: bold; margin-bottom: 5px;">高低+物体部位指向</p>
+                                    <p style="font-size: 0.85em; color: #888; font-style: italic;">The robotic arm grasps objects at specified heights and places them in feature-pointing regions, demonstrating the model's capabilities in object spatial height recognition and feature-pointing region identification.</p>
+                                </div>
+                            </div>
+
+                            <!-- Video 5 -->
+                            <div class="video-item">
+                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                    <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-description" style="margin-top: 15px; text-align: left;">
+                                    <p style="font-weight: bold; margin-bottom: 5px;">高低+手电指向</p>
+                                    <p style="font-size: 0.85em; color: #888; font-style: italic;">The robotic arm grasps objects at specified heights and places them in illuminated areas, demonstrating the model's capabilities in object spatial height recognition and illuminated area identification.</p>
+                                </div>
+                            </div>
+
+                            <!-- Video 6 -->
+                            <div class="video-item">
+                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                    <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-description" style="margin-top: 15px; text-align: left;">
+                                    <p style="font-weight: bold; margin-bottom: 5px;">高低+指代多步推理</p>
+                                    <p style="font-size: 0.85em; color: #888; font-style: italic;">The robotic arm grasps objects at specified heights and places them on containers in illuminated areas, demonstrating the model's object spatial relationship recognition and multi-step reasoning capability.</p>
+                                </div>
+                            </div>
+
+                            <!-- Video 7 -->
+                            <div class="video-item">
+                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                    <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-description" style="margin-top: 15px; text-align: left;">
+                                    <p style="font-weight: bold; margin-bottom: 5px;">物体规律摆放</p>
+                                    <p style="font-size: 0.85em; color: #888; font-style: italic;">The robotic arm precisely inserts objects into linearly arranged sequences, demonstrating the model's ability to understand spatial relationships and pattern reasoning between objects.</p>
+                                </div>
+                            </div>
+
+                            <!-- 预留空间给剩余的3个视频 -->
+                            <!-- Video 8 -->
+                            <div class="video-item">
+                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                    <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-description" style="margin-top: 15px; text-align: left;">
+                                    <p style="font-weight: bold; margin-bottom: 5px;">占位视频 8</p>
+                                    <p style="font-size: 0.85em; color: #888; font-style: italic;">Placeholder for future video 8. This will showcase system stability in real-world scenarios.</p>
+                                </div>
+                            </div>
+
+                            <!-- Video 9 -->
+                            <div class="video-item">
+                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                    <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-description" style="margin-top: 15px; text-align: left;">
+                                    <p style="font-weight: bold; margin-bottom: 5px;">占位视频 9</p>
+                                    <p style="font-size: 0.85em; color: #888; font-style: italic;">Placeholder for future video 9. This will demonstrate additional robotic behavior.</p>
+                                </div>
+                            </div>
+
+                            <!-- Video 10 -->
+                            <div class="video-item">
+                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                    <iframe src="https://www.youtube.com/embed/uiXKfOrfGrQ?rel=0&amp;showinfo=0"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="video-description" style="margin-top: 15px; text-align: left;">
+                                    <p style="font-weight: bold; margin-bottom: 5px;">占位视频 10</p>
+                                    <p style="font-size: 0.85em; color: #888; font-style: italic;">Placeholder for future video 10. Will be updated with new demonstration content.</p>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     
     <section class="section" id="Citation">

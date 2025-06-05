@@ -95,31 +95,52 @@
     
 
 
-    <div class="columns is-centered">
-        <div class="container">
-          <div class="content has-text-centered">
-            <div class="box m-5" >
+    <!-- <section class="section"> -->
+
+
+        <div class="columns is-centered">
+            <div class="container">
               <div class="content has-text-centered">
-                <h2 class="title is-3">Performance</h2>
-                <figure>
-                    <img src="images/results.png" alt="teaser" width="90%">
-                    <figcaption>
-                        <strong>Benchmark comparison across spatial reasoning and task planning.</strong>
-                        RoboBrain2.0-32B achieves state-of-the-art performance on four key embodied intelligence benchmarks: 
-                        <strong>BLINK-Spatial</strong>, <strong>CV-Bench</strong>, <strong>EmbSpatial</strong>, and <strong>RefSpatial</strong>. 
-                        It not only outperforms leading open-source models such as o4-mini and Qwen2.5-VL, 
-                        but also surpasses closed-source models like Gemini 2.5 Pro and Claude Sonnet 4 by a large margin on spatial grounding tasks — 
-                        especially in the challenging <strong>RefSpatial</strong> benchmark, where RoboBrain2.0 shows a >50% absolute improvement.
-                    </figcaption>
-                    <!-- <figcaption>                           
-                        RoboBrain2.0 outperforms leading open-source models across multiple spatial reasoning and task planning benchmarks, and demonstrates superior overall performance compared to representative closed-source models such as O4-mini and Gemini 2.5 Pro.
-                    </figcaption> -->
+                <div class="box m-5" >
+                  <div class="content has-text-centered">
+                    <h2 class="title is-3">Performance</h2>
+
+
+              <!-- 第一张图 -->
+              <figure style="margin-bottom: 3rem;">
+                <img src="images/results.png" alt="Benchmark results" style="width: 100%;">
+      
+              <!-- 第二张图 -->
+              <figure>
+                <img src="images/results_table.png" alt="Task capabilities" style="width: 100%;">
+                <figcaption class="has-text-justified is-size-6 mt-3">
+                    <strong>Benchmark comparison across spatial reasoning and task planning.</strong>
+                    RoboBrain2.0-32B achieves state-of-the-art performance on four key embodied intelligence benchmarks:
+                    <strong>BLINK-Spatial</strong>, <strong>CV-Bench</strong>, <strong>EmbSpatial</strong>, and <strong>RefSpatial</strong>.
+                    It not only outperforms leading open-source models such as o4-mini and Qwen2.5-VL,
+                    but also surpasses closed-source models like Gemini 2.5 Pro and Claude Sonnet 4 — 
+                    especially in the challenging <strong>RefSpatial</strong> benchmark, where RoboBrain2.0 shows a >50% absolute improvement.
+                  </figcaption>
                 </figure>
+
+
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+
+
+      
+<!-- 
+      
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+      
+       -->
 
     <div class="columns is-centered">
         <div class="container">
@@ -190,6 +211,53 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    
+    <section class="section" id="Citation">
+            <div class="container is-max-desktop content">
+                <h2 class="title">Citation</h2>
+                <p class="is-size-5">
+                    If you find our model helpful, feel free to cite it:
+                </p>
+                
+                <pre><code>@article{RoboBrain 2.0 Technical Report,
+    title={RoboBrain 2.0 Technical Report},
+    author={BAAI RoboBrain Team},
+    journal={arXiv preprint arXiv:TODO},
+    year={2025}
+    }
+@article{RoboBrain1.0,
+    title={Robobrain: A unified brain model for robotic manipulation from abstract to concrete},
+    author={Ji, Yuheng and Tan, Huajie and Shi, Jiayu and Hao, Xiaoshuai and Zhang, Yuan and Zhang, Hengyuan and Wang, Pengwei and Zhao, Mengdi and Mu, Yao and An, Pengju and others},
+    journal={arXiv preprint arXiv:2502.21257},
+    year={2025}
+    }
+@article{RoboOS,
+    title={RoboOS: A Hierarchical Embodied Framework for Cross-Embodiment and Multi-Agent Collaboration},
+    author={Tan, Huajie and Hao, Xiaoshuai and Lin, Minglan and Wang, Pengwei and Lyu, Yaoxu and Cao, Mingyu and Wang, Zhongyuan and Zhang, Shanghang},
+    journal={arXiv preprint arXiv:2505.03673},
+    year={2025}
+    }
+@article{RoboRefer,
+    title={RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics},
+    author={Zhou, Enshen and An, Jingkun and Chi, Cheng and Han, Yi and Rong, Shanyu and Zhang, Chi and Wang, Pengwei and Wang, Zhongyuan and Huang, Tiejun and Sheng, Lu and Zhang, Shanghang},
+    journal={arXiv preprint arXiv:TODO},
+    year={2025}
+    }
+@article{Reason-RFT,
+    title={Reason-rft: Reinforcement fine-tuning for visual reasoning},
+    author={Tan, Huajie and Ji, Yuheng and Hao, Xiaoshuai and Lin, Minglan and Wang, Pengwei and Wang, Zhongyuan and Zhang, Shanghang},
+    journal={arXiv preprint arXiv:2503.20752},
+    year={2025}
+    }
+@article{Code-as-Monitor,
+    title={Code-as-Monitor: Constraint-aware Visual Programming for Reactive and Proactive Robotic Failure Detection},
+    author={Zhou, Enshen and Su, Qi and Chi, Cheng and Zhang, Zhizheng and Wang, Zhongyuan and Huang, Tiejun and Sheng, Lu and Wang, He},
+    journal={arXiv preprint arXiv:2412.04455},
+    year={2024}
+    }</code></pre>
+            </div>
     </section>
 
 </body>

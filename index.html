@@ -79,19 +79,20 @@
     </section>
 
 
-        <section class="section">
-            <div class="container is-max-desktop">
-                <div class="columns is-centered has-text-centered">
-                    <div class="column is-four-fifths">
-                        <div class="content has-text-justified">
-                            <p>
-                                We are excited to introduce <strong>RoboBrain2.0</strong>, the most powerful open-source embodied brain model to date. Compared to its predecessor, RoboBrain1.0, our latest version significantly advances multi-agent task planning, spatial reasoning, and closed-loop execution. A detailed technical report will be released soon.
-                            </p>
-                        </div>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                        <p class="is-size-5">
+                            We are excited to introduce <strong>RoboBrain2.0</strong>, the most powerful open-source embodied brain model to date. Compared to its predecessor, RoboBrain1.0, our latest version significantly advances multi-agent task planning, spatial reasoning, and closed-loop execution. A detailed technical report will be released soon.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    
 
 
     <div class="columns is-centered">
@@ -99,14 +100,20 @@
           <div class="content has-text-centered">
             <div class="box m-5" >
               <div class="content has-text-centered">
+                <h2 class="title is-3">Performance</h2>
                 <figure>
                     <img src="images/results.png" alt="teaser" width="90%">
-                    
-                    <figcaption>                           
-                    <!-- <p> -->
-                        In spatial intelligence, RoboBrain 2.0 expands the concept of affordances from object-centric to space-centric representations, allowing robots to understand relative positions (e.g., front/back, left/right, near/far) and absolute distances. This leads to a 17% performance boost in affordance detection and trajectory generation. Furthermore, RoboBrain 2.0 incorporates closed-loop feedback and deep deliberation capabilities, enabling adaptive behavior in dynamic environments and reasoning-based task decomposition for enhanced reliability and success rates.
-                    <!-- </p> -->
+                    <figcaption>
+                        <strong>Benchmark comparison across spatial reasoning and task planning.</strong>
+                        RoboBrain2.0-32B achieves state-of-the-art performance on four key embodied intelligence benchmarks: 
+                        <strong>BLINK-Spatial</strong>, <strong>CV-Bench</strong>, <strong>EmbSpatial</strong>, and <strong>RefSpatial</strong>. 
+                        It not only outperforms leading open-source models such as o4-mini and Qwen2.5-VL, 
+                        but also surpasses closed-source models like Gemini 2.5 Pro and Claude Sonnet 4 by a large margin on spatial grounding tasks — 
+                        especially in the challenging <strong>RefSpatial</strong> benchmark, where RoboBrain2.0 shows a >50% absolute improvement.
                     </figcaption>
+                    <!-- <figcaption>                           
+                        RoboBrain2.0 outperforms leading open-source models across multiple spatial reasoning and task planning benchmarks, and demonstrates superior overall performance compared to representative closed-source models such as O4-mini and Gemini 2.5 Pro.
+                    </figcaption> -->
                 </figure>
               </div>
             </div>
@@ -119,11 +126,13 @@
           <div class="content has-text-centered">
             <div class="box m-5" >
               <div class="content has-text-centered">
+                <h2 class="title is-3">Architecture</h2>
                 <figure>
                     <img src="images/arch.png" alt="teaser" width="90%">
-                    <figcaption>（待写）RoboBrain2.0的框架。 consists of three key robotic capabilities for long-horizon manipulation tasks: <strong>planning</strong>, <strong>affordance perception</strong>, and <strong>trajectory prediction</strong>.
-                        Based on the ShareRobot dataset we have constructed, RoboBrain has achieved state-of-the-art performance in multiple robotic benchmarks through a well-designed multi-stage training process, 
-                        realizing a cognitive leap from abstract instruction understanding to concrete action expression.
+
+                    <figcaption>
+                        <strong>Architecture of RoboBrain2.0.</strong>
+                        The model supports <strong>multi-image</strong>, <strong>long video</strong>, and <strong>high-resolution visual inputs</strong>, along with complex task instructions and structured <strong>scene graphs</strong> on the language side. Visual inputs are processed via a Vision Encoder and MLP Projector, while textual inputs are tokenized into a unified token stream. All inputs are fed into a <strong>LLM Decoder</strong> that performs <strong>long-chain-of-thought reasoning</strong> and outputs structured plans, spatial relations, and both <strong>relative</strong> and <strong>absolute coordinates</strong>.
                     </figcaption>
                 </figure>
               </div>
@@ -137,11 +146,15 @@
           <div class="content has-text-centered">
             <div class="box m-5" >
               <div class="content has-text-centered">
+                <h2 class="title is-3">Task Capabilities</h2>
                 <figure>
                     <img src="images/visualization.png" alt="teaser" width="90%">
-                    <figcaption>（待写）RoboBrain2.0的可视化。 consists of three key robotic capabilities for long-horizon manipulation tasks: <strong>planning</strong>, <strong>affordance perception</strong>, and <strong>trajectory prediction</strong>.
-                        Based on the ShareRobot dataset we have constructed, RoboBrain has achieved state-of-the-art performance in multiple robotic benchmarks through a well-designed multi-stage training process, 
-                        realizing a cognitive leap from abstract instruction understanding to concrete action expression.
+                    <figcaption>
+                        <strong>Task Capabilities of RoboBrain2.0.</strong>
+                        RoboBrain2.0 supports <strong>interactive reasoning</strong> with long-horizon planning and closed-loop feedback, 
+                        <strong>spatial perception</strong> for precise point and bbox prediction from complex instructions, 
+                        <strong>temporal perception</strong> for future trajectory estimation, 
+                        and <strong>scene reasoning</strong> through real-time structured memory construction and update.
                     </figcaption>
                 </figure>
               </div>

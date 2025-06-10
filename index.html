@@ -35,7 +35,7 @@
                             <img src="images/logo.png" alt="Logo"
                                  style="height: 3rem; margin-left: -80px; margin-right: 0px; flex-shrink: 0;">
                             <span style="display: inline-block;">
-                              RoboBrain v2: See Better. Think Harder. Do Smarter.
+                              RoboBrain 2.0: See Better. Think Harder. Do Smarter.
                               <!-- RoboBrain v2: Faster. Smarter. Stronger. -->
                             </span>
                           </h1>
@@ -118,9 +118,7 @@
                     <strong>Benchmark comparison across spatial reasoning and task planning.</strong>
                     RoboBrain2.0-32B achieves state-of-the-art performance on four key embodied intelligence benchmarks:
                     <strong>BLINK-Spatial</strong>, <strong>CV-Bench</strong>, <strong>EmbSpatial</strong>, and <strong>RefSpatial</strong>.
-                    It not only outperforms leading open-source models such as o4-mini and Qwen2.5-VL,
-                    but also surpasses closed-source models like Gemini 2.5 Pro and Claude Sonnet 4 — 
-                    especially in the challenging <strong>RefSpatial</strong> benchmark, where RoboBrain2.0 shows a >50% absolute improvement.
+                    It not only outperforms leading open-source models, but also surpasses closed-source models.
                   </figcaption>
                 </figure>
 
@@ -317,6 +315,45 @@
     </div>
 </section>
 
+
+<section>
+            <div class="container">
+              <div class="content has-text-centered">
+                <div class="box m-5" >
+                  <div class="content has-text-centered">
+                    <h2 class="title is-3">Training & Evaluation</h2>
+                    <div class="content has-text-justified">
+                        <p class="is-size-5">
+                            We highlight the distributed training framework <strong>FlagScale</strong> developed by BAAI Framework R&D team, 
+                            and the evaluation framework <strong>FlagEvalMM</strong> developed by BAAI FlagEval team. 
+                            Both are used for RoboBrain 2.0. Many thanks to the teams for their contributions!
+                        </p>
+                    </div>
+
+              <!-- 第一张图 -->
+              <figure style="margin-bottom: 3rem;">
+                <img src="images/logo_flagscale.png" alt="flagscale" style="width: 25%;">
+                <figcaption>
+                    <strong>FlagScale</strong> is a distributed training framework designed for large-scale models, supporting efficient training and evaluation of models like RoboBrain 2.0.
+                    It provides a flexible and scalable solution for training large models across multiple GPUs and nodes.
+                </figcaption>
+              </figure>
+              <!-- 第二张图 -->
+              <figure style="margin-bottom: 3rem;">
+                <img src="images/logo_flageval.png" alt="flageval" style="width: 30%;">
+                <figcaption>
+                    <strong>FlagEvalMM</strong> is a comprehensive evaluation framework for multi-modal models, including RoboBrain 2.0.
+                    It provides a suite of benchmarks and metrics to assess the performance of multi-modal models in various tasks, ensuring robust evaluation and comparison.
+                </figcaption>
+              </figure>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</section>
     
     <section class="section" id="Citation">
             <div class="container is-max-desktop content">

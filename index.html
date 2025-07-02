@@ -86,7 +86,9 @@
                 <div class="column is-four-fifths">
                     <div class="content has-text-justified">
                         <p class="is-size-5">
-                            We are excited to introduce <strong>RoboBrain2.0</strong>, the most powerful open-source embodied brain model to date. Compared to its predecessor, RoboBrain1.0, our latest version significantly advances multi-agent task planning, spatial reasoning, and closed-loop execution. A detailed technical report will be released soon.
+                            We are excited to introduce <strong>RoboBrain2.0</strong>, the most powerful open-source embodied brain model to date. Compared to its predecessor, RoboBrain 1.0, our latest version are designed to unify perception, reasoning, and planning for complex embodied tasks in physical environments. It comes in two variants: a lightweight 7B model and a full-scale 32B model, featuring a heterogeneous architecture with a vision encoder and a language model. Despite its compact size, RoboBrain 2.0 achieves strong performance 
+                            across a wide spectrum of embodied reasoning tasks. On both spatial and temporal benchmarks, the 32B variant achieves leading results in most cases, surpassing prior open-source and proprietary models.
+                            In particular, it supports key real-world embodied intelligence capabilities, including spatial understanding (e.g., affordance prediction, spatial referring, trajectory forecasting) and temporal decision-making (e.g., closed-loop interaction, multi-agent long-horizon planning, and real-time scene memory). This report details the model architecture, data construction, multi-stage training strategies, infrastructure and practical applications. We hope RoboBrain 2.0 advances embodied AI research and serves as a practical step toward building generalist embodied agents.
                         </p>
                     </div>
                 </div>
@@ -113,12 +115,29 @@
       
               <!-- 第二张图 -->
               <figure>
-                <img src="images/results_table.png" alt="Task capabilities" style="width: 100%;">
+                <img src="images/result_table_1.png" alt="Task capabilities" style="width: 100%;">
                 <figcaption class="has-text-justified is-size-6 mt-3">
-                    <strong>Benchmark comparison across spatial reasoning and task planning.</strong>
-                    RoboBrain2.0-32B achieves state-of-the-art performance on four key embodied intelligence benchmarks:
-                    <strong>BLINK-Spatial</strong>, <strong>CV-Bench</strong>, <strong>EmbSpatial</strong>, and <strong>RefSpatial</strong>.
-                    It not only outperforms leading open-source models, but also surpasses closed-source models.
+                    <strong>Benchmark comparison across spatial reasoning and temporal task planning.</strong>
+                    RoboBrain2.0-32B achieves state-of-the-art (SOTA) or near-SOTA performance on <strong>nine spatial reasoning benchmarks</strong> and <strong>three temporal reasoning benchmarks</strong>.
+                    It not only outperforms leading open-source models such as Cosmos-Reason1 and Qwen2.5-VL, but also surpasses closed-source models like Gemini 2.5 Pro, o4-mini and Claude Sonnet 4.
+                  </figcaption>
+                </figure>
+
+                <figure>
+                <img src="images/result_table_2.png" alt="Task capabilities" style="width: 100%;">
+                <figcaption class="has-text-justified is-size-6 mt-3">
+                    <strong>Benchmark comparison across spatial reasoning and temporal task planning.</strong>
+                    RoboBrain2.0-32B achieves state-of-the-art (SOTA) or near-SOTA performance on <strong>nine spatial reasoning benchmarks</strong> and <strong>three temporal reasoning benchmarks</strong>.
+                    It not only outperforms leading open-source models such as Cosmos-Reason1 and Qwen2.5-VL, but also surpasses closed-source models like Gemini 2.5 Pro, o4-mini and Claude Sonnet 4.
+                  </figcaption>
+                </figure>
+
+                <figure>
+                <img src="images/result_table_3.png" alt="Task capabilities" style="width: 100%;">
+                <figcaption class="has-text-justified is-size-6 mt-3">
+                    <strong>Benchmark comparison across spatial reasoning and temporal task planning.</strong>
+                    RoboBrain2.0-32B achieves state-of-the-art (SOTA) or near-SOTA performance on <strong>nine spatial reasoning benchmarks</strong> and <strong>three temporal reasoning benchmarks</strong>.
+                    It not only outperforms leading open-source models such as Cosmos-Reason1 and Qwen2.5-VL, but also surpasses closed-source models like Gemini 2.5 Pro, o4-mini and Claude Sonnet 4.
                   </figcaption>
                 </figure>
 

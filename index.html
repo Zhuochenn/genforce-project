@@ -1,369 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>GenForce</title>
-    <meta name="description" content="GenForce">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>GenForce</title>
+  <meta name="description" content="GenForce: Training Tactile Sensors to Learn Force Sensing from Each Other">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/png" href="./images/logo.png">
+  <link rel="icon" type="image/png" href="./images/logo.png">
 
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-    <link rel="stylesheet" href="./static/css/bulma.min.css">
-    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="./static/css/index.css">
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Noto+Sans:400,600|Castoro:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="./static/js/fontawesome.all.min.js"></script>
-    <script src="./static/js/bulma-carousel.min.js"></script>
-    <script src="./static/js/bulma-slider.min.js"></script>
-    <script src="./static/js/index.js"></script>
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <!-- Page-level styles: 统一间距、作者与图注样式、视频网格 -->
+  <style>
+    :root {
+      --maxw: 1100px;
+      --accent: #0f62fe; /* IBM Blue-like,清爽 */
+    }
+    html, body {
+      font-family: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: #1f2937;
+      scroll-behavior: smooth;
+    }
+    .container.is-max-desktop { max-width: var(--maxw); }
+    .publication-title { line-height: 1.25; }
+    .section { padding-top: 3rem; padding-bottom: 3rem; }
+    .content p, .content li { line-height: 1.75; font-size: 1.05rem; }
+    .subtitle-muted { color: #6b7280; }
+
+    /* Authors and affiliations */
+    .authors { font-size: 1.05rem; line-height: 1.6; margin-top: .75rem; }
+    .authors a { color: #1f2937; text-decoration: none; }
+    .authors a:hover { text-decoration: underline; }
+    .authors sup { font-size: 0.7em; top: -0.6em; }
+    .affiliations { margin-top: .5rem; color: #4b5563; font-size: .98rem; }
+    .affiliations li { list-style: none; }
+    .notes { color: #6b7280; font-size: .95rem; margin-top: .25rem; }
+
+    /* Buttons row */
+    .link-row .button { margin: .25rem .35rem; }
+    .button.is-dark { background: #111827; }
+    .button.is-dark:hover { background: #000; }
+
+    /* Figures and captions */
+    figure { margin: 1.25rem auto; }
+    figure img { width: 100%; height: auto; border-radius: 6px; }
+    figcaption { color: #6b7280; font-size: .95rem; margin-top: .4rem; }
+    .box.section-box { padding: 2rem 1.5rem; }
+
+    /* Hero */
+    .hero .hero-body { padding-top: 3rem; padding-bottom: 2rem; }
+    .kicker { letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 700; font-size: .85rem; }
+
+    /* Video grid: two columns on >= 769px, one column on mobile */
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+      margin-top: 18px;
+    }
+    @media (min-width: 769px) {
+      .video-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .video-item {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 12px;
+      box-shadow: 0 1px 2px rgba(0,0,0,.03);
+    }
+    .ratio-16x9 {
+      position: relative; width: 100%; padding-bottom: 56.25%; overflow: hidden; border-radius: 8px;
+    }
+    .ratio-16x9 iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
+    .video-title { font-weight: 600; margin: 10px 2px 0; }
+  </style>
 </head>
 
+<body>
 
-<body onload="SubmissionVidep();">
-    <section class="hero">
-        <div class="hero-body">
-            <div class="container is-max-desktop">
-                <div class="columns is-centered">
-                    <div class="column has-text-centered">
-                        <h1 class="title is-2 publication-title" style="display: flex; align-items: center; padding-left: 40px;">
-                            <!-- <img src="images/logo.png" alt="Logo"
-                                 style="height: 3rem; margin-left: -80px; margin-right: 0px; flex-shrink: 0;"> -->
-                            <span style="display: inline-block;">
-                              GenForce: Training Tactile Sensors to Learn Force Sensing from Each Other
-                            </span>
-                          </h1>
-                        
-                        <div class="is-size-4 publication-authors">
-                            <span class="author-block">
-                                <a target="_blank" href="">Zhuo Chen1, Ni Ou1, Xuyang Zhang1, Zhiyuan Wu1, Yongqiang Zhao1, Yupeng Wang1, Nathan Lepora2, Lorenzo Jamone3, Jiankang Deng4, Shan Luo1</a>
-                                <a target="_blank" href="">1 King’s College London, London, United Kingdom.
-2 University of Bristol, Bristol, United Kingdom.
-3 University College London, London, United Kingdom.
-4 Imperial College London, London, United Kingdom.</a>
-                            </span>
-                        </div>
-                        <div class="column has-text-centered">
-                            <!-- ArXiv link -->
-                            <span class="link-block">
-                                <a target="_blank" href="https://www.researchsquare.com/article/rs-6513579/v1" class="external-link button is-normal is-rounded is-dark">
-                                    <span class="icon"><i class="fas fa-file"></i></span>
-                                    <span>Preprint</span>
-                                </a>
-                            </span>
-                            <!-- Code Link. -->
-                            <span class="link-block">
-                                <a target="_blank" href="" class="external-link button is-normal is-rounded is-dark">
-                                    <span class="icon"><i class="fab fa-github"></i></span>
-                                    <span>Code</span>
-                                </a>
-                            </span>
-                            <span class="link-block">
-                            <a target="_blank" href="" class="external-link button is-normal is-rounded is-dark">
-                                <span class="icon"><i class="fas fa-check"></i></span>
-                                <span>Dataset</span>
-                            </a>
-                        </span>
-                            <!-- <span class="link-block">
-                                <a target="_blank" href="https://ei2.baai.ac.cn/home" class="external-link button is-normal is-rounded is-dark">
-                                    <span class="icon"><i class="fas fa-laptop"></i></span>
-                                    <span>Demo</span>
-                                </a>
-                            </span> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="section">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-                    <div class="content has-text-justified">
-                        <p class="is-size-5">
-                            Humans achieve stable and dexterous object manipulation by coordinating grasp forces across multiple fingers and palms, facilitated by a unified tactile memory system in the somatosensory cortex. This system encodes and stores tactile experiences across skin regions, enabling the flexible reuse and transfer of touch information. 
-                            Inspired by this biological capability, we present GenForce, a framework that enables transferable force sensing across tactile sensors in robotic hands. GenForce unifies tactile signals into shared marker representations, analogous to cortical sensory encoding, allowing force prediction models trained on one sensor to be transferred to others without the need for exhaustive force data collection. 
-                            We demonstrate that GenForce generalizes across both homogeneous sensors with varying configurations and heterogeneous sensors with distinct sensing modalities and material properties. 
-                            This transferable force sensing is also demonstrated with high-performance in robot force control including daily object grasping, slip detection and avoidance. Our results highlight a scalable paradigm for robotic tactile learning, offering new pathways toward adaptable and tactile memory-driven manipulation in unstructured environments.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-
-    <!-- <section class="section"> -->
-
-
+  <!-- Hero / Title -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
         <div class="columns is-centered">
-            <div class="container">
-              <div class="content has-text-centered">
-                <div class="box m-5" >
-                  <div class="content has-text-centered">
-                    <h2 class="title is-3">Background</h2>
+          <div class="column has-text-centered">
 
+            <p class="kicker">GenForce</p>
+            <h1 class="title is-2 publication-title">
+              Training Tactile Sensors to Learn Force Sensing from Each Other
+            </h1>
 
-              <!-- 第一张图 -->
-              <figure style="margin-bottom: 3rem;">
-                <img src="images/Background.png" alt="Background" style="width: 100%;">
-      
-              <!-- 第二张图 -->
-              <figure>
-                <img src="images/Tactile_memory.png" alt="Tactile_memory" style="width: 100%;">
-                <figcaption class="has-text-justified is-size-6 mt-3">
-                    <strong>Human tactile memory</strong>
-                  </figcaption>
-                </figure>
-
-                <figure>
-                <img src="images/Motivation.png" alt="Motivation" style="width: 100%;">
-                <figcaption class="has-text-justified is-size-6 mt-3">
-                    <strong>Bioinspiration</strong>
-                  </figcaption>
-                </figure>
-
-
-                  </div>
-                </div>
-              </div>
+            <!-- Authors -->
+            <div class="authors">
+              <p>
+                <a>Zhuo Chen<sup>1</sup></a>,
+                <a>Ni Ou<sup>1</sup></a>,
+                <a>Xuyang Zhang<sup>1</sup></a>,
+                <a>Zhiyuan Wu<sup>1</sup></a>,
+                <a>Yongqiang Zhao<sup>1</sup></a>,
+                <a>Yupeng Wang<sup>1</sup></a>,
+                <a>Nathan Lepora<sup>2</sup></a>,
+                <a>Lorenzo Jamone<sup>3</sup></a>,
+                <a>Jiankang Deng<sup>4</sup></a>,
+                <a>Shan Luo<sup>1</sup></a>
+              </p>
+              <ul class="affiliations">
+                <li><sup>1</sup> King’s College London, London, United Kingdom</li>
+                <li><sup>2</sup> University of Bristol, Bristol, United Kingdom</li>
+                <li><sup>3</sup> University College London, London, United Kingdom</li>
+                <li><sup>4</sup> Imperial College London, London, United Kingdom</li>
+              </ul>
+              <!-- 可选说明：取消注释并替换邮箱/标记 -->
+              <!-- <p class="notes">* These authors contributed equally. ✉ Correspondence: your.email@kcl.ac.uk</p> -->
             </div>
-          </div>
 
-        <div class="columns is-centered">
-            <div class="container">
-              <div class="content has-text-centered">
-                <div class="box m-5" >
-                  <div class="content has-text-centered">
-                    <h2 class="title is-3">Human tactile memory</h2>
-
-              <figure>
-                <img src="images/Tactile_memory.png" alt="Tactile_memory" style="width: 100%;">
-                <figcaption class="has-text-justified is-size-6 mt-3">
-                    <strong>Human tactile memory</strong>
-                  </figcaption>
-                </figure>
-
-                <figure>
-                <img src="images/Motivation.png" alt="Motivation" style="width: 100%;">
-                <figcaption class="has-text-justified is-size-6 mt-3">
-                    <strong>Bioinspiration</strong>
-                  </figcaption>
-                </figure>
-
-
-                  </div>
-                </div>
-              </div>
+            <!-- Action buttons -->
+            <div class="link-row" style="margin-top: 1rem;">
+              <a target="_blank" href="https://www.researchsquare.com/article/rs-6513579/v1" class="button is-small is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file"></i></span><span>Preprint</span>
+              </a>
+              <a target="_blank" href="" class="button is-small is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+              </a>
+              <a target="_blank" href="" class="button is-small is-rounded is-dark">
+                <span class="icon"><i class="fas fa-database"></i></span><span>Dataset</span>
+              </a>
             </div>
-          </div>
 
-        <div class="columns is-centered">
-            <div class="container">
-              <div class="content has-text-centered">
-                <div class="box m-5" >
-                  <div class="content has-text-centered">
-                    <h2 class="title is-3">Bioinspiration</h2>
-
-                <figure>
-                <img src="images/Motivation.png" alt="Motivation" style="width: 100%;">
-                <figcaption class="has-text-justified is-size-6 mt-3">
-                    <strong>Bioinspiration</strong>
-                  </figcaption>
-                </figure>
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-      
-<!-- 
-      
-            </div>
-          </div>
-        </div>
-      </section>
-      
-       -->
-
-    <div class="columns is-centered">
-        <div class="container">
-          <div class="content has-text-centered">
-            <div class="box m-5" >
-              <div class="content has-text-centered">
-                <h2 class="title is-3">Architecture</h2>
-                <figure>
-                    <img src="images/Architecture.png" alt="teaser" width="90%">
-
-                    <figcaption>
-                        <strong>Architecture of GenForce</strong>
-                       
-                    </figcaption>
-                </figure>
-              </div>
-            </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- <div class="columns is-centered">
-        <div class="container">
-          <div class="content has-text-centered">
-            <div class="box m-5" >
-              <div class="content has-text-centered">
-                <h2 class="title is-3">Task Capabilities</h2>
-                <figure>
-                    <img src="images/visualization.png" alt="teaser" width="90%">
-                    <figcaption>
-                        <strong>Task Capabilities of RoboBrain2.0.</strong>
-                        RoboBrain2.0 supports <strong>interactive reasoning</strong> with long-horizon planning and closed-loop feedback, 
-                        <strong>spatial perception</strong> for precise point and bbox prediction from complex instructions, 
-                        <strong>temporal perception</strong> for future trajectory estimation, 
-                        and <strong>scene reasoning</strong> through real-time structured memory construction and update.
-                    </figcaption>
-                </figure>
-              </div>
-            </div>
+  <!-- Abstract / Overview -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <p class="is-size-5">
+              Humans achieve stable and dexterous object manipulation by coordinating grasp forces across multiple fingers and palms, facilitated by a unified tactile memory system in the somatosensory cortex. This system encodes and stores tactile experiences across skin regions, enabling the flexible reuse and transfer of touch information.
+              Inspired by this biological capability, we present GenForce, a framework that enables transferable force sensing across tactile sensors in robotic hands. GenForce unifies tactile signals into shared marker representations, analogous to cortical sensory encoding, allowing force prediction models trained on one sensor to be transferred to others without the need for exhaustive force data collection.
+              We demonstrate that GenForce generalizes across both homogeneous sensors with varying configurations and heterogeneous sensors with distinct sensing modalities and material properties. This transferable force sensing is also demonstrated with high performance in robot force control including daily object grasping, slip detection and avoidance. Our results highlight a scalable paradigm for robotic tactile learning, offering new pathways toward adaptable and tactile memory–driven manipulation in unstructured environments.
+            </p>
           </div>
         </div>
-      </div> -->
-<!-- YouTube Video Grid -->
-<section class="hero is-small">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full">
-                    <div class="content">
-                        <h2>
-                            <div class="text-image-container title is-3">
-                                <div>
-                                    <img src="images/video_logo.png" alt="highlight" width="40">
-                                </div>
-                                <div class="text">
-                                    <p>Demo Videos</p>
-                                </div>
-                            </div>
-                        </h2>
-
-                        <!-- Video Grid Container -->
-                        <div class="video-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 30px;">
-
-                            <!-- Video 1 -->
-                            <div class="video-item">
-                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WH0H29L9_80?si=z8Al2-NOFQrqe9iV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <div class="video-description" style="margin-top: 15px; text-align: left;">
-                                    <p style="font-weight: bold; margin-bottom: 5px;">Marker-to-marker translation</p>
-                                    <p style="font-size: 0.85em; color: #888; font-style: italic;"> </p>
-                                </div>
-                            </div>
-
-                            <!-- Video 2 -->
-                            <div class="video-item">
-                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VcYdDlSoOmQ?si=r_yl8_HCiNCYfoDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <div class="video-description" style="margin-top: 15px; text-align: left;">
-                                    <p style="font-weight: bold; margin-bottom: 5px;">Force Prediction Performance</p>
-                                    <p style="font-size: 0.85em; color: #888; font-style: italic;"></p>
-                                </div>
-                            </div>
-
-                            <!-- Video 3 -->
-                            <div class="video-item">
-                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/d8XDvgV8BY8?si=gfQ74cKPjZZyqvA5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                <div class="video-description" style="margin-top: 15px; text-align: left;">
-                                    <p style="font-weight: bold; margin-bottom: 5px;">Dynamic Force Test</p>
-                                    <p style="font-size: 0.85em; color: #888; font-style: italic;"></p>
-                                </div>
-                            </div>
-
-                            <!-- Video 4 -->
-                            <div class="video-item">
-                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eEBpvs0Urks?si=kWQ3xHpEP0cK3tDV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <div class="video-description" style="margin-top: 15px; text-align: left;">
-                                    <p style="font-weight: bold; margin-bottom: 5px;">Daily object grasping (1)</p>
-                                    <!-- <p style="font-size: 0.85em; color: #888; font-style: italic;">Daily object grasping</p> -->
-                                </div>
-                            </div>
-
-                            <!-- Video 5 -->
-                            <div class="video-item">
-                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fs-T0AL-C_I?si=Pbt53NgDW6g-nG_D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <div class="video-description" style="margin-top: 15px; text-align: left;">
-                                    <p style="font-weight: bold; margin-bottom: 5px;">Daily object grasping (2)</p>
-                                    <!-- <p style="font-size: 0.85em; color: #888; font-style: italic;">Daily object grasping</p> -->
-                                </div>
-                            </div>
-
-                            <!-- Video 6 -->
-                            <div class="video-item">
-                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TeEXjSpj1PY?si=c5wIPC8gym5S_1LP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <div class="video-description" style="margin-top: 15px; text-align: left;">
-                                    <p style="font-weight: bold; margin-bottom: 5px;">Slip Detection & Avoidance (1)</p>
-                                    <!-- <p style="font-size: 0.85em; color: #888; font-style: italic;">Slip Detection & Avoidance</p> -->
-                                </div>
-                            </div>
-
-                            <!-- Video 7 -->
-                            <div class="video-item">
-                                <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/d0Dqasav5zo?si=LhX8XY8lJNE9l6D1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <div class="video-description" style="margin-top: 15px; text-align: left;">
-                                    <p style="font-weight: bold; margin-bottom: 5px;">Slip Detection & Avoidance (2)</p>
-                                    <!-- <p style="font-size: 0.85em; color: #888; font-style: italic;">Slip Detection & Avoidance</p> -->
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-    
-    <section class="section" id="Citation">
-            <div class="container is-max-desktop content">
-                <h2 class="title">Citation</h2>
-                <p class="is-size-5">
-                    If you find our model helpful, feel free to cite it:
-                </p>
-                
-                <pre><code>@article{chen2025general,
+  <!-- Background -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="box section-box">
+        <h2 class="title is-3 has-text-centered">Background</h2>
+        <figure>
+          <img src="images/Background.png" alt="Background">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Human tactile memory -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="box section-box">
+        <h2 class="title is-3 has-text-centered">Human Tactile Memory</h2>
+        <figure>
+          <img src="images/Tactile_memory.png" alt="Human tactile memory">
+          <figcaption><strong>Human tactile memory</strong></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bioinspiration -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="box section-box">
+        <h2 class="title is-3 has-text-centered">Bioinspiration</h2>
+        <figure>
+          <img src="images/Motivation.png" alt="Bioinspiration">
+          <figcaption><strong>Bioinspiration</strong></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="box section-box">
+        <h2 class="title is-3 has-text-centered">Architecture</h2>
+        <figure class="has-text-centered">
+          <img src="images/Architecture.png" alt="Architecture of GenForce" style="max-width: 90%;">
+          <figcaption><strong>Architecture of GenForce</strong></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Videos (Two-column responsive grid) -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">
+        <span style="vertical-align: middle;">
+          <img src="images/video_logo.png" alt="Video icon" width="40" style="vertical-align: middle; margin-right: 8px;">
+        </span>
+        Demo Videos
+      </h2>
+
+      <div class="video-grid">
+        <!-- 1 -->
+        <div class="video-item">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/WH0H29L9_80?si=z8Al2-NOFQrqe9iV"
+              title="Marker-to-marker translation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-title">Marker-to-marker translation</div>
+        </div>
+
+        <!-- 2 -->
+        <div class="video-item">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/VcYdDlSoOmQ?si=r_yl8_HCiNCYfoDA"
+              title="Force Prediction Performance" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-title">Force Prediction Performance</div>
+        </div>
+
+        <!-- 3 -->
+        <div class="video-item">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/d8XDvgV8BY8?si=gfQ74cKPjZZyqvA5"
+              title="Dynamic Force Test" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-title">Dynamic Force Test</div>
+        </div>
+
+        <!-- 4 -->
+        <div class="video-item">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/eEBpvs0Urks?si=kWQ3xHpEP0cK3tDV"
+              title="Daily object grasping (1)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-title">Daily object grasping (1)</div>
+        </div>
+
+        <!-- 5 -->
+        <div class="video-item">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/fs-T0AL-C_I?si=Pbt53NgDW6g-nG_D"
+              title="Daily object grasping (2)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-title">Daily object grasping (2)</div>
+        </div>
+
+        <!-- 6 -->
+        <div class="video-item">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/TeEXjSpj1PY?si=c5wIPC8gym5S_1LP"
+              title="Slip Detection & Avoidance (1)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-title">Slip Detection &amp; Avoidance (1)</div>
+        </div>
+
+        <!-- 7 -->
+        <div class="video-item">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/d0Dqasav5zo?si=LhX8XY8lJNE9l6D1"
+              title="Slip Detection & Avoidance (2)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-title">Slip Detection &amp; Avoidance (2)</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Citation -->
+  <section class="section" id="Citation">
+    <div class="container is-max-desktop">
+      <div class="box section-box">
+        <h2 class="title is-3 has-text-centered">Citation</h2>
+        <div class="content">
+          <p>If you find our model helpful, feel free to cite it:</p>
+<pre><code>@article{chen2025general,
   title={General Force Sensation for Tactile Robot},
-  author={Chen, Zhuo and Ou, Ni and Zhang, Xuyang and Wu, Zhiyuan and Zhao, Yongqiang and Wang, Yupeng and Lepora, Nathan and Jamone, Lorenzo and Deng, Jiankang and Luo, Shan},
+  author={Chen, Zhuo and Ou, Ni and Zhang, Xuyang and Wu, Zhiyuan
+          and Zhao, Yongqiang and Wang, Yupeng and Lepora, Nathan
+          and Jamone, Lorenzo and Deng, Jiankang and Luo, Shan},
   journal={arXiv preprint arXiv:2503.01058},
   year={2025}
 }</code></pre>
-            </div>
-    </section>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</body>
-</html>
-
+  <footer class="section" style="padding-top: 1.5rem; padding-bottom: 2rem;">
+    <div class="container is-max-desktop has-text-centered">
+      <p class="subtitle-muted">© 2025 GenForce Authors</p>
+    </div>
+  </footer>
 
 </body>
 </html>

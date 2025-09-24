@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>RoboBrain</title>
-    <meta name="description" content="RoboBrain2.0">
+    <title>GenForce</title>
+    <meta name="description" content="GenForce">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/png" href="./images/logo.png">
@@ -35,35 +35,38 @@
                             <img src="images/logo.png" alt="Logo"
                                  style="height: 3rem; margin-left: -80px; margin-right: 0px; flex-shrink: 0;">
                             <span style="display: inline-block;">
-                              RoboBrain 2.0: See Better. Think Harder. Do Smarter.
-                              <!-- RoboBrain v2: Faster. Smarter. Stronger. -->
+                              GenForce: Training Tactile Sensors to Learn Force Sensing from Each Other
                             </span>
                           </h1>
                         
                         <div class="is-size-4 publication-authors">
                             <span class="author-block">
-                                <a target="_blank" href="">BAAI RoboBrain Team</a>
+                                <a target="_blank" href="">Zhuo Chen1, Ni Ou1, Xuyang Zhang1, Zhiyuan Wu1, Yongqiang Zhao1, Yupeng Wang1, Nathan Lepora2, Lorenzo Jamone3, Jiankang Deng4, Shan Luo1</a>
+                                <a target="_blank" href="">1 King’s College London, London, United Kingdom.
+2 University of Bristol, Bristol, United Kingdom.
+3 University College London, London, United Kingdom.
+4 Imperial College London, London, United Kingdom.</a>
                             </span>
                         </div>
                         <div class="column has-text-centered">
                             <!-- ArXiv link -->
                             <span class="link-block">
-                                <a target="_blank" href="https://arxiv.org/abs/2507.02029" class="external-link button is-normal is-rounded is-dark">
+                                <a target="_blank" href="https://www.researchsquare.com/article/rs-6513579/v1" class="external-link button is-normal is-rounded is-dark">
                                     <span class="icon"><i class="fas fa-file"></i></span>
-                                    <span>Technical Report</span>
+                                    <span>Preprint</span>
                                 </a>
                             </span>
                             <!-- Code Link. -->
                             <span class="link-block">
-                                <a target="_blank" href="https://github.com/FlagOpen/RoboBrain2.0" class="external-link button is-normal is-rounded is-dark">
+                                <a target="_blank" href="" class="external-link button is-normal is-rounded is-dark">
                                     <span class="icon"><i class="fab fa-github"></i></span>
                                     <span>Code</span>
                                 </a>
                             </span>
                             <span class="link-block">
-                            <a target="_blank" href="https://huggingface.co/BAAI/RoboBrain2.0-7B" class="external-link button is-normal is-rounded is-dark">
+                            <a target="_blank" href="" class="external-link button is-normal is-rounded is-dark">
                                 <span class="icon"><i class="fas fa-check"></i></span>
-                                <span>Checkpoints</span>
+                                <span>Dataset</span>
                             </a>
                         </span>
                             <!-- <span class="link-block">
@@ -86,9 +89,10 @@
                 <div class="column is-four-fifths">
                     <div class="content has-text-justified">
                         <p class="is-size-5">
-                            We are excited to introduce <strong>RoboBrain2.0</strong>, the most powerful open-source embodied brain model to date. Compared to its predecessor, RoboBrain 1.0, our latest version are designed to unify perception, reasoning, and planning for complex embodied tasks in physical environments. It comes in two variants: a lightweight 7B model and a full-scale 32B model, featuring a heterogeneous architecture with a vision encoder and a language model. Despite its compact size, RoboBrain 2.0 achieves strong performance 
-                            across a wide spectrum of embodied reasoning tasks. On both spatial and temporal benchmarks, the 32B variant achieves leading results in most cases, surpassing prior open-source and proprietary models.
-                            In particular, it supports key real-world embodied intelligence capabilities, including spatial understanding (e.g., affordance prediction, spatial referring, trajectory forecasting) and temporal decision-making (e.g., closed-loop interaction, multi-agent long-horizon planning, and real-time scene memory). This report details the model architecture, data construction, multi-stage training strategies, infrastructure and practical applications. We hope RoboBrain 2.0 advances embodied AI research and serves as a practical step toward building generalist embodied agents.
+                            Humans achieve stable and dexterous object manipulation by coordinating grasp forces across multiple fingers and palms, facilitated by a unified tactile memory system in the somatosensory cortex. This system encodes and stores tactile experiences across skin regions, enabling the flexible reuse and transfer of touch information. 
+                            Inspired by this biological capability, we present GenForce, a framework that enables transferable force sensing across tactile sensors in robotic hands. GenForce unifies tactile signals into shared marker representations, analogous to cortical sensory encoding, allowing force prediction models trained on one sensor to be transferred to others without the need for exhaustive force data collection. 
+                            We demonstrate that GenForce generalizes across both homogeneous sensors with varying configurations and heterogeneous sensors with distinct sensing modalities and material properties. 
+                            This transferable force sensing is also demonstrated with high-performance in robot force control including daily object grasping, slip detection and avoidance. Our results highlight a scalable paradigm for robotic tactile learning, offering new pathways toward adaptable and tactile memory-driven manipulation in unstructured environments.
                         </p>
                     </div>
                 </div>

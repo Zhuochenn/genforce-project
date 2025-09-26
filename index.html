@@ -158,8 +158,8 @@
           <div class="content">
             <p class="is-size-5">
               Humans achieve stable and dexterous object manipulation by coordinating grasp forces across multiple fingers and palms, facilitated by a unified tactile memory system in the somatosensory cortex. This system encodes and stores tactile experiences across skin regions, enabling the flexible reuse and transfer of touch information.
-              Inspired by this biological capability, we present GenForce, a framework that enables transferable force sensing across tactile sensors in robotic hands. GenForce unifies tactile signals into shared marker representations, analogous to cortical sensory encoding, allowing force prediction models trained on one sensor to be transferred to others without the need for exhaustive force data collection.
-              We demonstrate that GenForce generalizes across both homogeneous sensors with varying configurations and heterogeneous sensors with distinct sensing modalities and material properties. This transferable force sensing is also demonstrated with high performance in robot force control including daily object grasping, slip detection and avoidance. Our results highlight a scalable paradigm for robotic tactile learning, offering new pathways toward adaptable and tactile memory–driven manipulation in unstructured environments.
+              Inspired by this biological capability, we present <strong>GenForce, the first framework</strong> that <strong>enables transferable force sensing across tactile sensors</strong> in robotic hands. GenForce unifies tactile signals into <strong>shared marker representations</strong>, analogous to cortical sensory encoding, <strong>allowing force prediction models trained on one sensor to be transferred to others without the need for exhaustive force data collection</strong>.
+              We demonstrate that GenForce generalizes across both <strong>homogeneous sensors with varying configurations</strong> and <strong>heterogeneous sensors with distinct sensing modalities and material properties</strong>. This transferable force sensing is also demonstrated with high performance in <strong>robot force control including daily object grasping, slip detection and avoidance</strong>. Our results highlight a <strong>scalable paradigm for robotic tactile learning</strong>, offering new pathways toward <strong>adaptable and tactile memory–driven manipulation</strong> in unstructured environments.
             </p>
           </div>
         </div>
@@ -237,7 +237,13 @@
         <h2 class="title is-3 has-text-centered">Marker-to-marker Translation Performance</h2>
         <figure>
           <img src="images/m2m.png" alt="sim">
-          <figcaption class="has-text-centered"><strong>Marker-to-marker translation in simulated data</strong> shown with t-SNE </figcaption>
+          <figcaption class="has-text-centered"><strong>Marker-to-marker translation in simulated data</strong> shown with t-SNE.
+            we <strong>first propose a simple simulation pipeline to acquire extensive deformed marker images</strong>. 
+            densities—referring to <strong>GelSight, uSkin, TacTip and GelTip </strong>sensors. <strong>Eighteen 3D-printed indenters</strong> with diverse geometrical properties 
+            (vertices, edges, and curvatures) are used for indentation33. Each marker pattern can serve as both source sensor and target sensor, 
+            resulting in a total of <strong>132 sensor combinations</strong>.The generated images and target images are <strong>aligned closely in feature space and visually indistinguishable</strong>.
+            <strong>See Supplementary Video 1</strong>.
+           </figcaption>
         </figure>
 
         <figure>

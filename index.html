@@ -174,7 +174,7 @@
         <h2 class="title is-3 has-text-centered">Background</h2>
         <figure>
           <img src="images/Background.png" alt="Background">
-          <figcaption><strong style="color:#e91e63">Robot grasping objects with tactile sensors and force control</strong> mimics human actions with sensory receptors. 
+          <figcaption><strong style="color:#a00ee4">Robot grasping objects with tactile sensors and force control</strong> mimics human actions with sensory receptors. 
             These bio-inspired tactile sensors cannot transfer force data with each other due to <strong>differences in sensing principles, 
             structural designs and material properties</strong>. Current practice to train force prediction models uses <strong>repetitive and costly data collection process</strong> for force labels.</figcaption>
         </figure>
@@ -189,7 +189,7 @@
         <h2 class="title is-3 has-text-centered">Human Tactile Memory</h2>
         <figure>
           <img src="images/Tactile_memory.png" alt="Human tactile memory">
-          <figcaption> In humans, the <strong style="color:#e91e63">tactile memory system</strong> enables the <strong>storage and retrieval</strong> of experienced tactile information, 
+          <figcaption> In humans, the <strong style="color:#a00ee4">tactile memory system</strong> enables the <strong>storage and retrieval</strong> of experienced tactile information, 
              such as haptic stimuli, <strong>across skin regions on hands</strong>. Mechanoreceptors in the skin detect deformation, which is translated into a <strong>unified sensory encoding</strong>, 
              and transmitted to the somatosensory cortex via peripheral nerves for storage and processing. 
              This human ability to <strong>adapt, unify, and transfer tactile sensation</strong> offers valuable inspiration for developing <strong>transferable tactile sensing</strong> in robots. </figcaption>
@@ -205,7 +205,7 @@
         <h2 class="title is-3 has-text-centered">Bioinspiration</h2>
         <figure>
           <img src="images/Motivation.png" alt="Bioinspiration">
-          <figcaption><strong style="color:#e91e63">Overview of the GenForce model</strong>. Tactile sensors produce <strong>diverse tactile signals under 
+          <figcaption><strong style="color:#a00ee4">Overview of the GenForce model</strong>. Tactile sensors produce <strong>diverse tactile signals under 
             the same deformation</strong> due to differences in sensing principles, structural designs and material properties. 
             GenForce <strong>unifies tactile signals into marker representation</strong>, enables <strong>marker-to-marker translation</strong> across various sensors, 
             and achieves <strong>high-accuracy force prediction</strong> on uncalibrated sensors using data transferred from calibrated sensors.</figcaption>
@@ -221,7 +221,7 @@
         <h2 class="title is-3 has-text-centered">Architecture</h2>
         <figure>
           <img src="images/Architecture.png" alt="Architecture of GenForce">
-          <figcaption><strong style="color:#e91e63">Marker-to-marker translation (M2M) model</strong>. The M2M model uses <strong>deformed images from calibrated sensors as input</strong> 
+          <figcaption><strong style="color:#a00ee4">Marker-to-marker translation (M2M) model</strong>. The M2M model uses <strong>deformed images from calibrated sensors as input</strong> 
             and <strong>reference images from uncalibrated sensors as conditions</strong> to <strong>generate deformed images</strong> that mimic the deformation applied to uncalibrated sensors.  
             <strong>Spatiotemporal force prediction model</strong> takes sequential contact images as input and outputs three-axis forces, 
             enhancing prediction accuracy through a spatiotemporal module.</figcaption>
@@ -237,7 +237,7 @@
         <h2 class="title is-3 has-text-centered">Marker-to-marker Translation Performance</h2>
         <figure>
           <img src="images/m2m.png" alt="sim">
-          <figcaption><strong style="color:#e91e63">Marker-to-marker translation in simulated data</strong> shown with t-SNE.
+          <figcaption><strong style="color:#a00ee4">Marker-to-marker translation in simulated data</strong> shown with t-SNE.
             we <strong>first propose a simple simulation pipeline to acquire extensive deformed marker images</strong>. 
             densities—referring to <strong>GelSight, uSkin, TacTip and GelTip </strong>sensors. <strong>Eighteen 3D-printed indenters</strong> with diverse geometrical properties 
             (vertices, edges, and curvatures) are used for indentation33. Each marker pattern can serve as both source sensor and target sensor, 
@@ -248,7 +248,7 @@
 
         <figure>
           <img src="images/heter_m2m.png" alt="hetero_m2m" >
-          <figcaption><strong style="color:#e91e63">Marker-to-marker translation in heterogeneous sensors</strong> shown with images.
+          <figcaption><strong style="color:#a00ee4">Marker-to-marker translation in heterogeneous sensors</strong> shown with images.
           We <strong>unify three distinct tactile signals into marker representation</strong>. For <strong>electronic sensor arrays</strong>, we develop a <strong>signal-to-marker pipeline</strong>
           that <strong>converts multichannel raw signals into marker displacement and diameter change</strong>. 
           Although <strong>some tactile arrays (e.g., capacitive or resistive)</strong> can only measure pressure in each taxel compared to magnetic sensor with 3-axis measurement, 
@@ -269,7 +269,7 @@
         <h2 class="title is-3 has-text-centered">Force Prediction Performance</h2>
         <figure>
           <img src="images/homo.png" alt="homo">
-          <figcaption><strong style="color:#e91e63">Homogeneous Translation Performance</strong> compared with ATI nano 17 F/T sensor before and after using GenForce.
+          <figcaption><strong style="color:#a00ee4">Homogeneous Translation Performance</strong> compared with ATI nano 17 F/T sensor before and after using GenForce.
           The <strong>source-only method exhibits large errors (Supplementary Video 2)</strong>. The maximum error in normal force exceeds 4.8 N. 
           Shear force errors are average above 0.28 N. In addition, most sensor combinations have negative R2 values and high variance 
           and demonstrate poor performance in real-time force prediction. <strong>After using the GenForce model, all force errors are significantly reduced, and R2 values improve across all combinations</strong>. 
@@ -278,7 +278,7 @@
 
         <figure>
           <img src="images/hetero.png" alt="hetero">
-          <figcaption><strong style="color:#e91e63">Heterogeneous Translation Performance</strong> compared with ATI nano 17 F/T sensor before and after using GenForce.
+          <figcaption><strong style="color:#a00ee4">Heterogeneous Translation Performance</strong> compared with ATI nano 17 F/T sensor before and after using GenForce.
           The average of MAE over all six combinations decreases below 0.92 N for normal force, while Fx and Fy reduce below 0.22 N and 0.3 N, respectively.
            Notably, the uSkin_TacTip group shows a 93% improvement of in MAE (from 7.76 N to 0.52 N) and a 66% improvement of Fy (from 0.59 N to 0.2 N). 
            The force errors for all combinations are <strong>centered around zero within ranges of -4N to 0N in normal direction and -3N to 3N in shear direction, 
@@ -297,7 +297,7 @@
         <h2 class="title is-3 has-text-centered">Applications</h2>
         <figure>
           <img src="images/Dynamic.png" alt="Dynamic">
-          <figcaption><strong style="color:#e91e63">Force prediction with dynamic contact events</strong> compared with ATI nano 17 F/T sensor
+          <figcaption><strong style="color:#a00ee4">Force prediction with dynamic contact events</strong> compared with ATI nano 17 F/T sensor
           We <strong>evaluated our model in real-time across six transfer groups</strong> under more dynamic conditions (see Supplementary Video 3). 
           Tactile sensors were mounted on an ATI Nano17 F/T sensor, and we applied forces using four daily objects with different shapes and materials, 
           including <strong>screwdriver, glue stick, plastic pizza, and a LEGO block</strong>  . 
@@ -308,7 +308,7 @@
 
         <figure>
           <img src="images/Grapsing.png" alt="Grapsing">
-          <figcaption><strong style="color:#e91e63">Daily objects grasping with transferable force sensing and control using GelSight (A-II) and uSkin (3 axis)</strong>. 
+          <figcaption><strong style="color:#a00ee4">Daily objects grasping with transferable force sensing and control using GelSight (A-II) and uSkin (3 axis)</strong>. 
             <strong>We transfer the force prediction model to above two sensors by using a third flat-surface vision-based tactile sensor (GelSight, marker pattern A-II) tactile sensor with our GenForce model</strong> . 
             The task requires robot to grasp nine daily objects with different sizes, shapes and material without damage them. 
             Those objects include potato <strong>chip, grape, strawberry, orange, plum, wood block, glue stick, meat box and tea box, 
@@ -320,7 +320,7 @@
 
         <figure>
           <img src="images/Slip.png" alt="Slip">
-          <figcaption><strong style="color:#e91e63">Transferable force sensing in robot slip detection and avoidance</strong>. 
+          <figcaption><strong style="color:#a00ee4">Transferable force sensing in robot slip detection and avoidance</strong>. 
             A curved surface, vision based TacTip sensor (palm shape) is mounted on the left finger, 
             and a three-axis magnetic uSkin sensor is mounted on the right. The TacTip's force prediction model 
             is transferred from GelSight (D-I), and the uSkin model is subsequently transferred from the TacTip. 

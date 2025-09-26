@@ -270,7 +270,7 @@
         <figure>
           <img src="images/homo.png" alt="homo">
           <figcaption><strong>Homogeneous Translation Performance</strong> compared with ATI nano 17 F/T sensor before and after using GenForce.
-          The <strong>source-only method exhibits large errors (Supplementary Video 2)<strong>. The maximum error in normal force exceeds 4.8 N. 
+          The <strong>source-only method exhibits large errors (Supplementary Video 2)</strong>. The maximum error in normal force exceeds 4.8 N. 
           Shear force errors are average above 0.28 N. In addition, most sensor combinations have negative R2 values and high variance 
           and demonstrate poor performance in real-time force prediction. <strong>After using the GenForce model, all force errors are significantly reduced, and R2 values improve across all combinations</strong>. 
           </figcaption>
@@ -301,7 +301,7 @@
           We <strong>evaluated our model in real-time across six transfer groups</strong> under more dynamic conditions (see Supplementary Video 3). 
           Tactile sensors were mounted on an ATI Nano17 F/T sensor, and we applied forces using four daily objects with different shapes and materials, 
           including <strong>screwdriver, glue stick, plastic pizza, and a LEGO block</strong>  . 
-          A human operator performed five common dynamic contact events, including <strong>>press, rub, roll, push, and pull, 
+          A human operator performed five common dynamic contact events, including <strong>press, rub, roll, push, and pull, 
           as well as continuous combinations of these on the sensor surface</strong>. All test groups exhibited <strong>fast, accurate responses comparable to a commercial F/T sensor</strong>.
           </figcaption>
         </figure>
@@ -309,7 +309,7 @@
         <figure>
           <img src="images/Grapsing.png" alt="Grapsing">
           <figcaption><strong>Daily objects grasping with transferable force sensing and control using GelSight (A-II) and uSkin (3 axis)</strong>. 
-            We <strong>transfer the force prediction model to above two sensors by using a third flat-surface vision-based tactile sensor (GelSight, marker pattern A-II) tactile sensor with our GenForce model</strong> . 
+            <strong>We transfer the force prediction model to above two sensors by using a third flat-surface vision-based tactile sensor (GelSight, marker pattern A-II) tactile sensor with our GenForce model</strong> . 
             The task requires robot to grasp nine daily objects with different sizes, shapes and material without damage them. 
             Those objects include potato <strong>chip, grape, strawberry, orange, plum, wood block, glue stick, meat box and tea box, 
             which are unseen in the training dataset</strong>. During the grasping, the arm is controlled with a proportional controller to 
@@ -321,13 +321,13 @@
         <figure>
           <img src="images/Slip.png" alt="Slip">
           <figcaption><strong>Force sensing in robot slip detection and avoidance</strong>. 
-            <strong>A curved surface, vision based TacTip sensor (palm shape) is mounted on the left finger, 
-            and a three-axis magnetic uSkin sensor is mounted on the right</strong>. <strong>The TacTip's force prediction model 
-            is transferred from GelSight (D-I), and the uSkin model is subsequently transferred from the TacTip</strong>. 
+            A curved surface, vision based TacTip sensor (palm shape) is mounted on the left finger, 
+            and a three-axis magnetic uSkin sensor is mounted on the right. The TacTip's force prediction model 
+            is transferred from GelSight (D-I), and the uSkin model is subsequently transferred from the TacTip. 
             The task proceeds through <strong>several stages—moving down, proportional control grasping, lifting, 
             slip detection and avoidance at the top position, release, and return to home—with the force controller</strong> 
             active only during the grasp and slip detection phases. We evaluate <strong>four objects—banana, plum, meat box, 
-            and glue stick<strong>. Beyond completing the grasp, external forces are applied by a human at the top position to induce slip. 
+            and glue stick</figcaption>strong>. Beyond completing the grasp, external forces are applied by a human at the top position to induce slip. 
             The robot detects slip via changes in shear force and responds by narrowing the gripper width. As shown in above figure and<strong> Supplementary Videos 6-7</strong>, 
             <strong>the system completes all stages successfully</strong>, demonstrating the practical applications of our model in real robotic tasks.</figcaption>
         </figure>     

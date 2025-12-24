@@ -100,6 +100,10 @@
               Training Tactile Sensors to <br> Learn Force Sensing from Each Other
             </h1>
 
+            <div style="margin-top: 1rem; font-size: 1rem; color: #059669; font-weight: 600;">
+              Accepted by Nature Communications
+            </div>
+
             <style>
               .authors .lead { color: #e91e63; }     /* lead authors */
               .authors .co   { color: #333; }        /* co-authors */
@@ -172,10 +176,11 @@
       <div class="columns is-centered">
         <div class="column is-four-fifths">
           <div class="content">
-            <p class="is-size-5">
+            <p class="is-size-6">
               Humans achieve stable and dexterous object manipulation by coordinating grasp forces across multiple fingers and palms, facilitated by a unified tactile memory system in the somatosensory cortex. This system encodes and stores tactile experiences across skin regions, enabling the flexible reuse and transfer of touch information.
               Inspired by this biological capability, we present <strong style="color:#a00ee4">GenForce, the first framework that enables transferable force sensing across tactile sensors in robotic hands</strong>. GenForce unifies tactile signals into shared marker representations, analogous to cortical sensory encoding, allowing force prediction models trained on one sensor to be transferred to others without the need for exhaustive force data collection.
-              We demonstrate that GenForce generalizes on simulated data with 132 transfer groups and real-world data with 74 groups, across both <strong style="color:#a00ee4">homogeneous sensors with varying configurations</strong> and <strong style="color:#a00ee4">heterogeneous sensors with distinct sensing modalities and material properties</strong>. This transferable force sensing is also demonstrated with high performance in <strong style="color:#a00ee4">robot force control including daily object grasping, slip detection and avoidance</strong>. Our results highlight a scalable paradigm for robotic tactile learning, offering new pathways toward adaptable and tactile memory–driven manipulation in unstructured environments.
+              We demonstrate that GenForce generalizes on simulated data with 132 transfer groups and real-world data with 74 groups, across both <strong style="color:#a00ee4">homogeneous sensors with varying configurations</strong> and <strong style="color:#a00ee4">heterogeneous sensors with distinct sensing modalities and material properties</strong>. This transferable force sensing is also demonstrated with high performance in 
+              <strong style="color:#a00ee4">robot manipulation including daily-object grasping, slip detection and compensation with multi-sensor force coordination</strong>. Our results highlight a scalable paradigm for robotic tactile learning, offering new pathways toward adaptable and tactile memory–driven manipulation in unstructured environments.
             </p>
           </div>
         </div>
@@ -444,13 +449,13 @@
         <div class="content">
           <p>If you find our model helpful, feel free to cite it:</p>
 <pre><code>
-  @article{chen2025general,
-  title={General Force Sensation for Tactile Robot},
+  @article{chen2026genforce,
+  title={Training Tactile Sensors to Learn Force Sensing from Each Other},
   author={Chen, Zhuo and Ou, Ni and Zhang, Xuyang and Wu, Zhiyuan
-          and Zhao, Yongqiang and Wang, Yupeng and Lepora, Nathan
+          and Zhao, Yongqiang and Wang, Yupeng and Papastavridis, EmmanouilSpyrakos and Lepora, Nathan
           and Jamone, Lorenzo and Deng, Jiankang and Luo, Shan},
-  journal={arXiv preprint arXiv:2503.01058},
-  year={2025}
+  journal={Nature Communications},
+  year={2026}
 
   @inproceedings{chen2025transforce,
   title={Transforce: Transferable force prediction for vision-based tactile sensors with sequential image translation},
